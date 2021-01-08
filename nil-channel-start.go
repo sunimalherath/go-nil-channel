@@ -36,7 +36,7 @@ func writer(ch chan int) {
 	}
 }
 func main() {
-	ch := make(chan int)
+	ch := make(chan int) // unbuffered channel
 
 	go reader(ch)
 	go writer(ch)
